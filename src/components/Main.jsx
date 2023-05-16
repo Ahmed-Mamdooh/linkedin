@@ -215,7 +215,7 @@ overflow: visible
   flex-grow: 1;
   overflow: hidden;
   display: flex;
-  text-decoration: none
+  text-decoration: none;
   img{
 width: 48px;
     border-radius: 50%;
@@ -313,7 +313,7 @@ display: flex;
   border-radius: 5px;
   transition: backgroud 0.3s;
   width: calc(100% / 4);
-  height: 50px;
+  height: 40px;
   justify-content: center;
 
   &:hover{

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Login from './components/Login'
-import Home from './components/Home'
-import Header from './components/Header'
-import { getUserAuth } from './redux/actions' 
-import {connect} from "react-redux"
-import RequireAuth from './components/RequireAuth'
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Home from './components/Home';
+import Header from './components/Header';
+import { getUserAuth } from './redux/actions'; 
+import {connect} from "react-redux";
+import RequireAuth from './components/RequireAuth';
 function LinkedIn() {
   useEffect(()=>{
     getUserAuth()
@@ -26,12 +26,9 @@ function LinkedIn() {
 </div>
     )
 }
-const mapStateToProps = (state)=>{
-  return {};
-}
 const mapDispatchToProps= (dispatch)=>{
   return {
     getUserAuth: ()=> dispatch(getUserAuth())
   }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(LinkedIn)
+export default connect(mapDispatchToProps)(LinkedIn)
