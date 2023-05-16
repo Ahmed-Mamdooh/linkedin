@@ -113,7 +113,7 @@ function Main(props) {
 ))}
         </Content>)
         :
-        <p>There are no articles</p>
+        <NoArticles>There are no articles yet</NoArticles>
     }
       <Postmodal toggleShow={toggleShow} show={show}/>
     </Container>
@@ -157,6 +157,7 @@ flex-direction: column;
   }
  }
  div:nth-of-type(2){
+    overflow-x: auto;
       display: flex;
     justify-content: space-between;
     padding: 0 40px 10px;
@@ -165,7 +166,6 @@ flex-direction: column;
     height: 40px;
     border-radius: 20px;
     padding: 5px 10px;
-
       border: none;
     background: transparent;
     display: flex;
@@ -175,6 +175,10 @@ flex-direction: column;
           background-color: rgba(0, 0, 0, 0.08);
     }
     }
+    @media (min-width: 992px){
+      padding-right: auto;
+    padding-left: auto;
+    }
  }
 `
 const Content = styled.div`
@@ -183,36 +187,49 @@ text-align: center;
   width: 70px;
 }
 `
+const NoArticles = styled.p`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 56%;
+padding: 20px;
+background: white;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 0px 1px;
+text-transform: capitalize;
+font-weight: bold;
+color: rgb(102, 102, 102);
+`
 const Article= styled(CommonCard)`
 padding: 0;
 margin: 0 0 8px;
 overflow: visible
 `
  const SharedActor = styled.div`
+ display: flex;
+ align-items: center;
  flex-wrap: nowrap;
  padding: 12px 16px 0;
  margin-bottom: 8px;
- align-items: center;
- display: flex;
  a{
   margin-right: 12px;
   flex-grow: 1;
   overflow: hidden;
   display: flex;
   text-decoration: none
-
   img{
-    width: 48px;
-    height: 48px;
-    border-radius: 50%
+width: 48px;
+    border-radius: 50%;
   }
   > div{
-    display: flex;
-    flex-direction; column;
+display: flex;
+    -webkit-box-flex: 1;
     flex-grow: 1;
-    flex-basis: 0;
+    flex-basis: 0px;
     margin-left: 8px;
     overflow: hidden;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
     span{
       text-align: left;
       &:first-child{
@@ -296,7 +313,7 @@ overflow: visible
   border-radius: 5px;
   transition: backgroud 0.3s;
   width: calc(100% / 4);
-  height: 60px;
+  height: 50px;
   justify-content: center;
 
   &:hover{

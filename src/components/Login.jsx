@@ -16,8 +16,8 @@ function Login(props) {
   <img src='/images/home-logo.svg'/>
 </a>
 <div>
-     <Join>Join now</Join>
-   <Sign>Sign in</Sign>
+     {/* <Join>Join now</Join> */}
+   <Sign onClick={()=> props.signIn()}>Sign in</Sign>
 </div>
     </Nav>
     <Section>
@@ -56,20 +56,20 @@ flex-wrap: nowrap;
     }
 }
 `
-const Join = styled.a`
-font-size: 16px;
-padding: 10px 12px;
-text-decoration: none;
-border-radius: 4px;
-color: rgba(0,0,0,0.6);
-margin-right: 12px;
-cursor: pointer;
-&:hover{
-    background-color: rgba(0,0,0, 0.08);
-    color: rgba(0,0,0,0.9);
-    text-decoration: none
-}
-`
+// const Join = styled.a`
+// font-size: 16px;
+// padding: 10px 12px;
+// text-decoration: none;
+// border-radius: 4px;
+// color: rgba(0,0,0,0.6);
+// margin-right: 12px;
+// cursor: pointer;
+// &:hover{
+//     background-color: rgba(0,0,0, 0.08);
+//     color: rgba(0,0,0,0.9);
+//     text-decoration: none
+// }
+// `
 const Sign = styled.a`
 box-shadow: inset 0 0 0 1px #0a66c2;
 color: #0a66c2;

@@ -62,24 +62,24 @@ li{
     font-size: 14px;
     > div{
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+    gap: 5px;
     }
 
     button{
-        background-color: tranparent;
-        color: rgba(0 0 0 0.6);
-        box-shadow: inset 0 0 0 1px rgba(0,0,0, 0.6);
-        padding: 16px;
-        align-items: center;
-        border-radius: 15px;
-        box-sizing: border-box;
-        font-weight: 600;
-        display: inline-flex;
-        justify-content: center;
-        max-height: 32px;
-        max-width: 32px;
-        text-align: center;
-        outline: none;
+     padding: 16px;
+    border: 1px solid #aaa;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-weight: 600;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-height: 32px;
+    width: 100%;
+    text-align: center;
     }
 }
 `
@@ -90,6 +90,7 @@ background-repeat: np-repeat;
 width: 48px;
 height: 48px;
 margin-right: 8px;
+border-radius: 50%;
 `
 const Recommendation = styled.a`
 color: #0a662c2;

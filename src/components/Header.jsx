@@ -15,7 +15,7 @@ function Header(props) {
                 <div>
                     <input type='text' placeholder='search'/>
                     <SearchIcon>
-<img src="/images/search-icon.svg"/>
+                      <img src="/images/search-icon.svg"/>
                     </SearchIcon>
                 </div>
             </Search>
@@ -82,13 +82,14 @@ const Container = styled.div`
 background-color: white;
 border-bottom: 1px solid rgba(0,0,0, 0.08);
 left: 0;
-padding: 0 24px;
 position: fixed;
 top: 0;
 width: 100vw;
 z-index: 100;
-@media (max-width: 767px){
-    padding: 15px
+padding: 15px
+@media (min-width: 992px){
+    padding: 0 24px;
+    width: unset
 }
 `
 const Content = styled.div`
@@ -96,11 +97,16 @@ display: flex;
 align-items: center;
 margin: 0 auto;
 min-height: 100%;
-max-width: 1128px
+max-width: 1128px;
+    padding: 1em;
+@media (min-width: 992px){
+    padding: 0 24px;
+}
 `;
 const Logo = styled.span`
     margin-right: 8px;
     font-size: 0;
+    padding: 0 10px;
 `;
 const Search = styled.div`
 opacity: 1;
@@ -153,12 +159,8 @@ const NavListWrap = styled.ul`
 display: flex;
 flex-wrap: nowrap;
 list-style: none;
-// gap: 20px;
-// justify-content: center;
-@media(min-width: 1128px){
-    justify-content: right;
-    margin-right: 30px;
-}
+padding: 0 24px;
+overflow-x: auto;
 .active{
     span::after{
         content: "";
@@ -172,10 +174,15 @@ list-style: none;
         border-color: rgba(0,0,0, 0.9)
     }
 }
+@media(min-width: 1128px){
+    justify-content: right;
+    margin-right: 30px;
+}
 `
 const NavItem = styled.li`
 display: flex;
 align-items: center;
+flex: 1;
 a{
     align-items: center;
     background: transparent;
@@ -186,17 +193,27 @@ a{
     justify-content: center;
     line-height: 1.5;
     min-height: 52px;
-    min-width: 80px;
+    min-width: 60px;
     position: relative;
     text-decoration: none;
+    img{
+     width: 24px;
+    height: 24px;
+}
     span{
+        display: none;
         color: rgba(0,0,0, 0.6);
-        display: flex;
         align-items: center  
     }
     @media(max-width: 767px){
-        min-height: 70px
+        min-height: 70px;
     }
+}
+@media(min-width: 992px){
+    min-width: 80px;
+ a span{
+      display: flex;
+  }
 }
 &:hover, &:active{
     a{
@@ -231,7 +248,7 @@ a > svg{
     border-radius: 50%;
 }
 a > img{
-    width: 24px;
+     width: 24px;
     height: 24px;
     border-radius: 50%;
 }
@@ -241,10 +258,18 @@ span{
 }
 &:hover{
     ${SignOut}{
-        margin-top: 10px;
-        align-items: center;
+margin-top: 5px;
+    margin-left: -48px;
+    -webkit-box-align: center;
+    align-items: center;
     display: flex;
- justify-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    &:hover{
+        background: #eee;
+    }
     }
 }
 `

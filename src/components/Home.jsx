@@ -46,6 +46,9 @@ p{
   flex-direction: column;
   padding: 15px 5px
 }
+@media (min-width: 992px){
+  transform: translateY(12px);
+}
 `
 const Layout = styled.div`
 display: grid;

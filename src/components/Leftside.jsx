@@ -166,6 +166,7 @@ padding: 8px 0 0;
 text-align: left;
 display: flex;
 flex-direction: column;
+height: 154px;
 
 a{
     cursor: pointer;
@@ -189,6 +190,10 @@ a:last-of-type{
     &:hover{
         background-color: rgba(0,0,0, 0.08)
     }
+}
+
+@media (min-width: 1128px){
+    height: 220px
 }
 `
 const mapStateToProps = (state)=>{
