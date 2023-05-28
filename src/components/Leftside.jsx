@@ -166,8 +166,6 @@ padding: 8px 0 0;
 text-align: left;
 display: flex;
 flex-direction: column;
-height: 154px;
-
 a{
     cursor: pointer;
     color: black;

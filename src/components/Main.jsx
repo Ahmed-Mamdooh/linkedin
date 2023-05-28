@@ -154,6 +154,12 @@ flex-direction: column;
     text-align: start;
     text-indent: 10px;
     color: #777;
+    // span{
+    //   display: none;
+    //   @media(min-width: 992px){
+    //     display: block
+    //   }
+    // }
   }
  }
  div:nth-of-type(2){
@@ -173,6 +179,21 @@ flex-direction: column;
     gap: 3px;
     &:hover{
           background-color: rgba(0, 0, 0, 0.08);
+    }
+        span{
+      display: none;
+      media(min-width:567px){
+        display: block
+      }
+      @media(min-width: 768px){
+      display: none;
+      }
+      @media(min-width: 992px){
+        display: block;
+      }
+      @media(max-width: 768px){
+        display: block;
+      }
     }
     }
     @media (min-width: 992px){
@@ -222,7 +243,6 @@ width: 48px;
   }
   > div{
 display: flex;
-    -webkit-box-flex: 1;
     flex-grow: 1;
     flex-basis: 0px;
     margin-left: 8px;

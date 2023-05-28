@@ -14,7 +14,7 @@ function RightSide() {
                     <Avatar/>
                 </a>
                 <div>
-                    <span>#Linkedin</span>
+                    <span>Ahmed Mamdooh</span>
                     <button>Follow</button>
                 </div>
             </li>
@@ -68,18 +68,20 @@ li{
 
     button{
      padding: 16px;
+     cursor: pointer;
     border: 1px solid #aaa;
-    -webkit-box-align: center;
     align-items: center;
     border-radius: 15px;
     box-sizing: border-box;
     font-weight: 600;
     display: inline-flex;
-    -webkit-box-pack: center;
     justify-content: center;
     max-height: 32px;
     width: 100%;
     text-align: center;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.08);
+    }
     }
 }
 `
