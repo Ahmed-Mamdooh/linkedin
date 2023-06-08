@@ -40,7 +40,7 @@ function Main(props) {
           </button>
           <button>
             <img src="/images/article-icon.svg" alt=""/>
-            <span>Write an article</span>
+            <span>Article</span>
           </button>
         </div>
       </Sharebox>
@@ -182,7 +182,7 @@ flex-direction: column;
     }
         span{
       display: none;
-      media(min-width:567px){
+      @media(min-width:567px){
         display: block
       }
       @media(min-width: 768px){
@@ -191,9 +191,9 @@ flex-direction: column;
       @media(min-width: 992px){
         display: block;
       }
-      @media(max-width: 768px){
-        display: block;
-      }
+      // @media(max-width: 768px){
+      //   display: block;
+      // }
     }
     }
     @media (min-width: 992px){

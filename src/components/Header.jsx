@@ -150,7 +150,7 @@ display: block;
 @media (max-width: 767px){
     position:fixed;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     background: white;
     width: 100%;
 }
@@ -160,7 +160,7 @@ display: flex;
 flex-wrap: nowrap;
 list-style: none;
 padding: 0 24px;
-overflow-x: auto;
+overflow-x: hidden;
 .active{
     span::after{
         content: "";
