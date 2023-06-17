@@ -183,6 +183,7 @@ const NavItem = styled.li`
 display: flex;
 align-items: center;
 flex: 1;
+cursor: pointer;
 a{
     align-items: center;
     background: transparent;
@@ -242,7 +243,49 @@ cursor: pointer
     background: #eee
 }
 `
-const User = styled(NavItem)`
+const User = styled.div`
+display: flex;
+align-items: center;
+flex: 1;
+a{
+    align-items: center;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.5;
+    min-height: 52px;
+    min-width: 60px;
+    position: relative;
+    text-decoration: none;
+    img{
+     width: 24px;
+    height: 24px;
+}
+    span{
+        display: none;
+        color: rgba(0,0,0, 0.6);
+        align-items: center  
+    }
+    @media(max-width: 767px){
+        min-height: 70px;
+    }
+}
+@media(min-width: 992px){
+    min-width: 80px;
+ a span{
+      display: flex;
+  }
+}
+&:hover, &:active{
+    a{
+        span{
+            color: rgba(0,0,0,0.9)
+        }
+    }
+}
 a > svg{
     width: 24px;
     border-radius: 50%;
