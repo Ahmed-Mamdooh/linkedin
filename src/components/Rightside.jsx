@@ -3,7 +3,8 @@ import styled from 'styled-components'
 function RightSide() {
   return (
    <Container>
-    <FollowedCard>
+   <div>
+     <FollowedCard>
         <Title>
             <h2>Add your feed</h2>
             <img src="/images/feed-icpn.svg" alt=""/>
@@ -27,11 +28,15 @@ function RightSide() {
     <BannerCard>
         <img src="/images/banner-image.jpg" alt=""/>
     </BannerCard>
+   </div>
    </Container>
   )
 }
 const Container = styled.div`
 grid-area: rightside;
+> div{
+    position: fixed
+}
 `
 const FollowedCard = styled.div`
 text-align: center

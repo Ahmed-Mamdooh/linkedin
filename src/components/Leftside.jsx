@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 function Leftside(props) {
     return (
         <Container>
-            <Artcard>
+    <div>
+                <Artcard>
                 <Userinfo>
                     <Cardbackground />
                     <a>
@@ -48,11 +49,18 @@ function Leftside(props) {
     </a>
     <a>Discover more</a>
  </Communitycard>
+    </div>
         </Container>
     )
 }
 const Container = styled.div`
 grid-area: leftside;
+// width: 100%;
+> div{
+    @media(min-width: 992px){
+        position: fixed;
+    }
+}
 `
 const Artcard = styled.div`
 text-align: center;

@@ -13,15 +13,6 @@ function LinkedIn() {
   return (
   <div className="app">
     <Router>
-    <Routes>
-      <Route path="/" element={
-      <RequireAuth>
-        <Header/>
-        <Home/>
-      </RequireAuth >
-      }/>
-    </Routes>
-    {/* 
         <Routes>
       <Route path="/" element={<Login/>}/>
       <Route path="/home" element={
@@ -31,7 +22,7 @@ function LinkedIn() {
       </RequireAuth >
       }/>
     </Routes>
-    */}
+   
   </Router>
 </div>
     )

@@ -47,7 +47,7 @@ function Main(props) {
       { props.articles.length >= 1? (
           <Content>
 {props.loading && <img src="/images/spin-loader.gif"/>}
-{ props.articles.map((article, index)=>(
+{ props.articles.slice(0,20).map((article, index)=>(
   <Article key={index}>
     <SharedActor>
       <a>
